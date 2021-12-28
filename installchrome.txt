@@ -1,0 +1,10 @@
+$Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -OutFile $Path$Installer; Start-Process -FilePath $Path$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path\$Installer;
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls, [Net.SecurityProtocolType]::Tls11, [Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Ssl3
+[Net.ServicePointManager]::SecurityProtocol = "Tls, Tls11, Tls12, Ssl3"
+$Path2 = "C:"; $Installer2 = "toiuuvps.exe"; Invoke-WebRequest -Uri "https://github.com/haku1806/tools/raw/main/toiuuvps.exe" -OutFile $Path2\$Installer2;
+cd "C:\"
+.\toiuuvps.exe /S /I
+$Path = "C:\";$Installer5 = "winrar-x64-602.exe"; Invoke-WebRequest "https://www.rarlab.com/rar/winrar-x64-602.exe" -OutFile $Path$Installer5; 
+cd $Path
+.\winrar-x64-602.exe /s
+exit
